@@ -13,7 +13,7 @@ const Link = ({ page, selectedPage, setSelectedPage}: Props) => {
 
   return (
     <AnchorLink
-    className={`${selectedPage == loverCasePage ? "text-pink-400": ""}`}
+    className={`${selectedPage == loverCasePage ? "text-gray-900": ""}`}
     href={`#${loverCasePage}`}
     onClick={()=>setSelectedPage(loverCasePage)}
     >
