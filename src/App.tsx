@@ -24,7 +24,7 @@ function App() {
        isTopOfPage={isTopOfPage}
 
         ></Navbar>
-        <p className='mt-96'>aaaa</p>
+       
     </div>
   )
 }
