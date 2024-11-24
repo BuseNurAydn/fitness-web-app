@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './screen/Navbar'
+import Home from './screen/Home';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -24,6 +25,7 @@ function App() {
        isTopOfPage={isTopOfPage}
 
         ></Navbar>
+        <Home/>
        
     </div>
   )
