@@ -31,13 +31,13 @@ const Home = ({setSelectedPage}: Props) => {
            
             <div className='relative'>
                 <div className='before:absolute before:-top-10 before:ml-4 before:-z-50  md:before:content-sliderbgtext'>
-                    <img src={HomeText}></img>
+                    <img className='mb-8 mt-20' src={HomeText}></img>
                 </div>
-                <p className=''>
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. At, necessitatibus tenetur architecto amet doloribus debitis enim vel expedita eius aliquam quasi deleniti, velit error odit cupiditate provident quidem ratione quos.
                 </p>
 
-                <motion.div className='mt-8 flex items-center gap-8'
+                <motion.div className='mt-8 flex items-center gap-8 '
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.5 }}
@@ -59,7 +59,7 @@ const Home = ({setSelectedPage}: Props) => {
             </motion.div>
         </div>
 
-        <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
+        <div className='flex basis-2/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
             <img src={HomePageGraphic} />
         </div>
 
