@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Navbar from './screen/Navbar'
+import Navbar from './screen/Navbar';
+import Benefits from './screen/Benefits';
 import Home from './screen/Home';
 
 function App() {
@@ -21,11 +22,9 @@ function App() {
 
   return (
     <div className='app bg-pink-100'>
-       <Navbar  
-       isTopOfPage={isTopOfPage}
-
-        ></Navbar>
+       <Navbar isTopOfPage={isTopOfPage}/>
         <Home/>
+        <Benefits/>
        
     </div>
   )

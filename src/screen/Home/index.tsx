@@ -9,7 +9,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 
 }
-const Home = ({ setSelectedPage }: Props) => {
+const Home = ({setSelectedPage}: Props) => {
   return (
     <section id="home" className=' bg-rose-100 py-10 md:h-full md:pb-0'>
 
