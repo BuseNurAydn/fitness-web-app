@@ -13,6 +13,9 @@ export default {
         xs: '480px',
         sm: '768px',
         md: '1060px'
+      },
+      content:{
+        bgtext: "url('./src/assets/arkaplanFoto.png')"
       }
     },
   },

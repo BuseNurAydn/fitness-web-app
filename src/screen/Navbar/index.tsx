@@ -61,7 +61,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
 
                             </div>
                         ) : (  //değilsek bunu yap
-                            <button className='rounded-full bg-amber-400 p-2'>
+                            <button className='rounded-full bg-amber-300 p-2'>
                                 <Bars3Icon
                                     onClick={() => setIsMenuToggle(!isMenuToggle)}
                                     className='w-6 h-6 text-pink-700'></Bars3Icon>
