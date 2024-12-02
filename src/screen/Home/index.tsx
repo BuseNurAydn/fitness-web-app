@@ -9,7 +9,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 
 }
-const Home = ({setSelectedPage}: Props) => {
+const Home = ({ setSelectedPage }: Props) => {
   return (
     <section id="home" className=' bg-rose-100 py-10 md:h-full md:pb-0'>
 
@@ -60,9 +60,18 @@ const Home = ({setSelectedPage}: Props) => {
             </div>
           </motion.div>
         </div>
+
         <div className='flex basis-3/5 justify-center md:ml-40 md:mt-32 md:justify-items-end'>
-          <img className='' src={HomeFoto} />
+          <motion.img
+            className="cursor-pointer"
+            src={HomeFoto}
+            alt="Home"
+            initial={{ scale: 1 }}  //başlangıç
+            whileHover={{ scale: 1.1 }}   //resmin üzerine fare ile geldiğimizde resim büyür
+            transition={{ duration: 0.4 }} //0.4s de tamamlanır animasyon
+          />
         </div>
+
       </motion.div>
     </section>
   )
