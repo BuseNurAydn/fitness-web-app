@@ -24,7 +24,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
 
     return (
         <nav>
-            <div className={`${flexBetween} ${navBarBackGround} fixed w-full top-0 z-20 py-6`}>
+            <div className={`${flexBetween} ${navBarBackGround} fixed w-full top-0 z-20 py-4`}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         <img src={Logo} alt="" className='w-52' />
@@ -58,7 +58,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                                     <ActionButton setSelectedPage={setSelectedPage}>Sign Up</ActionButton>
                                 </div>
 
-
                             </div>
                         ) : (  //değilsek bunu yap
                             <button className='rounded-full bg-amber-300 p-2'>
@@ -71,7 +70,6 @@ const Navbar = ({ isTopOfPage }: Props) => {
                         }
                     </div>
                 </div>
-
             </div>
             {!isDesktop && isMenuToggle &&
                 (
