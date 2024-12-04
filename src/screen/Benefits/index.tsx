@@ -5,6 +5,7 @@ import { PhoneIcon } from "@heroicons/react/24/solid";
 import BenefitCards from "./benefitCards";
 import { motion } from 'framer-motion' //animasyon için //framer animation
 import BenefitFoto from '../../assets/BenefitFoto.png'
+import PinkButton from "../../shared/PinkButton";
 
 
 type Props = {}
@@ -79,10 +80,10 @@ const Benefits = (props: Props) => {
         >
           <h2 className="font-bold uppercase text-lg mb-8 text-zinc-600"> Million of member very happy getting </h2>
           <div className="font-semibold text-gray-100 my-8">
-            <a href="" className="mr-4 md:px-5 md:py-2 p-2 bg-pink-400  rounded-lg">Fit</a>
-            <a href="" className="mr-4 md:px-5 md:py-2 p-2 bg-pink-400 rounded-lg">Fitness</a>
-            <a href="" className="mr-4 md:px-5 md:py-2 p-2 bg-pink-400 rounded-lg">Gym</a>
-            <a href="" className="mr-4 md:px-5 md:py-2 p-2 bg-pink-400 rounded-lg">Healthy</a>
+            <PinkButton>Fit</PinkButton>
+            <PinkButton>Fitness</PinkButton>         
+            <PinkButton>Gym</PinkButton>         
+            <PinkButton>Healthy</PinkButton>
           </div>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia impedit natus aut perferendis molestias adipisci quibusdam et at laborum aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sequi veniam distinctio illo quo quos quasi quibusdam tempora tenetur corporis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, quasi.
           </p>
