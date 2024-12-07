@@ -4,6 +4,9 @@ import Navbar from './screen/Navbar';
 import Benefits from './screen/Benefits';
 import Home from './screen/Home';
 import OurClasses from './screen/OurClasses';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 
 function App() {

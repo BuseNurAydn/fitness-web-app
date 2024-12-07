@@ -2,7 +2,7 @@ import { ClassType } from "../../shared/types";
 import foto1 from "../../assets/jpg/Foto-1.jpg"
 import Htext from "../../shared/Htext";
 import Class from "./Class";
-//import Slider from "react-slick";
+import Slider from "react-slick";
 
 type Props = {}
 
@@ -37,9 +37,68 @@ const classes: Array<ClassType> = [
     name: "Elliptical Bike",
     description: 'Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.',
   }
-
 ]
+const Arrow = (props: any) => {
+  const { className, style, onClick } = props;
+
+  return (
+    <div
+      className={`${className} custom-arrow ${
+        className.includes("slick-next") ? "next-arrow" : "prev-arrow"
+      }`}
+      style={{
+        ...style,
+        position: "absolute", 
+        top: "40%",          
+        transform: "translateY(-50%)",
+        borderRadius: "50%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 10,
+        cursor: "pointer",
+      }}
+      onClick={onClick}
+    >
+      {className.includes("slick-next") ? (
+    <span style={{ fontSize: "40px", color: "pink" }}>›</span>
+  ) : (
+    <span style={{ fontSize: "40px", color: "pink", paddingRight:"70px" }}>‹</span>
+  )} 
+    </div>
+  );
+};
+
 const OurClasses = (props: Props) => {
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    arrows: true,
+    nextArrow: <Arrow />,
+    prevArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet için üst sınır (1024px ve altı)
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true, // Tabletlerde oklar görünsün
+        },
+      },
+      {
+        breakpoint: 768, // Mobil üst sınır (768px ve altı)
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false, // Mobilde oklar gizlensin
+        },
+      },
+    ],
+  };
   
   return (
     <section id="ourclasses" className="w-full md:py-20">
@@ -48,23 +107,25 @@ const OurClasses = (props: Props) => {
           <Htext>Our Classes</Htext>
           <p className="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et perferendis quis, laudantium, enim doloremque ratione nemo libero cumque quos aut, velit laboriosam assumenda qui ab facilis accusamus deleniti sit.</p>
         </div>
-        <div className="flex flex-wrap justify-between items-center text-center">
-            {classes.map((item: ClassType) => (
-                <Class
-                key={item.name} 
-                  name={item.name}
-                  description={item.description}
-                  image={item.image}
-                />
-             
-            ))}
-        
-        </div>
+        <Slider {...settings}>
+          {classes.map((item: ClassType) => (
+            <div key={item.name} className="pr-4">
+              <Class
+                name={item.name}
+                description={item.description}
+                image={item.image}
+              />
+            </div>
+          ))}
+        </Slider>
 
       </div>
-
     </section>
+   
+  
   )
+  
 }
 
 export default OurClasses;
+
