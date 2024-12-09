@@ -3,6 +3,7 @@ import foto1 from "../../assets/jpg/Foto-1.jpg"
 import Htext from "../../shared/Htext";
 import Class from "./Class";
 import Slider from "react-slick";
+import { motion } from 'framer-motion' //animasyon için //framer animation
 
 type Props = {}
 
@@ -107,6 +108,17 @@ const OurClasses = (props: Props) => {
           <Htext>Our Classes</Htext>
           <p className="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et perferendis quis, laudantium, enim doloremque ratione nemo libero cumque quos aut, velit laboriosam assumenda qui ab facilis accusamus deleniti sit.</p>
         </div>
+        <motion.div
+            animate={{ opacity: 1 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
         <Slider {...settings}>
           {classes.map((item: ClassType) => (
             <div key={item.name} className="pr-4">
@@ -118,6 +130,7 @@ const OurClasses = (props: Props) => {
             </div>
           ))}
         </Slider>
+        </motion.div>
 
       </div>
     </section>
