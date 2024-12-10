@@ -59,12 +59,12 @@ const Benefits = (props: Props) => {
           </BenefitCards>
         ))}
       </div>
-      <div className="md:flex justify-between items-center mt-16 gap-20" >
+      <div className="md:flex justify-between items-center mt-16 gap-10" >
         {/* Resim */}
         <motion.img
           src={BenefitFoto}
           alt=""
-          className="md:w-2/6"
+          className="sm:w-2/6"
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}

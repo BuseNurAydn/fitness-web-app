@@ -7,6 +7,7 @@ import OurClasses from './screen/OurClasses';
 import ContactUs from './screen/ContactUs';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Footer from './screen/Footer';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Benefits/>
         <OurClasses/>
         <ContactUs/> 
+        <Footer/>
     </div>
   )
 }
