@@ -4,8 +4,10 @@ import Navbar from './screen/Navbar';
 import Benefits from './screen/Benefits';
 import Home from './screen/Home';
 import OurClasses from './screen/OurClasses';
+import ContactUs from './screen/ContactUs';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 
 
 
@@ -31,7 +33,7 @@ function App() {
         <Home/>
         <Benefits/>
         <OurClasses/>
-       
+        <ContactUs/> 
     </div>
   )
 }
