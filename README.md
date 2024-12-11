@@ -8,6 +8,7 @@ Repo where I coded the fitness website using React.js, TypeScript, Tailwind Css,
 ![Proje görsel 3](src/assets/images/fitnessweb-3.png)
 ![Proje görsel 4](src/assets/images/fitnessweb-4.png)
 ![Proje görsel 5](src/assets/images/fitnessweb-5.png)
+![Proje görsel 6](src/assets/images/fitnessweb-6.png)
 
 
 

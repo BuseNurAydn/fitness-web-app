@@ -10,11 +10,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from './screen/Footer';
 
 
-
-
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
-
+  
   useEffect(()=>{
       const handleScroll= () =>{
         if(window.scrollY ===0){
