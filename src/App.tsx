@@ -8,10 +8,14 @@ import ContactUs from './screen/ContactUs';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Footer from './screen/Footer';
+import {SelectedPage} from './shared/types';
 
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const handleSetSelectedPage = (page: SelectedPage) => {
+    console.log("Selected page:", page);
+  };
   
   useEffect(()=>{
       const handleScroll= () =>{
@@ -28,8 +32,8 @@ function App() {
 
   return (
     <div className='app bg-pink-100'>
-       <Navbar isTopOfPage={isTopOfPage}/>
-        <Home/>
+        <Navbar isTopOfPage={isTopOfPage}/>
+        <Home  setSelectedPage={handleSetSelectedPage}/>
         <Benefits/>
         <OurClasses/>
         <ContactUs/> 
